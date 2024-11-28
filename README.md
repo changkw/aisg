@@ -36,3 +36,26 @@ This Python program generates text using the Hugging Face Inference API and the 
 4. `validate_token()`: Verifies the API token by making a test request to the API.
 5. `generate_text(input_text)`: Sends a user-provided prompt to the API and processes the response.
 6. `main()`: The main function that manages user interactions, input validation, and text generation.
+### Sample Execution Flow
+1. User launches the program.
+2. The script validates the API token. If invalid, the program terminates with an error message.
+3. The user is prompted to enter a text prompt.
+4. The program sends the input to the Hugging Face API and retrieves the generated text.
+5. The processed text is displayed alongside the user’s input.
+### Example
+```
+Welcome to the Text Generation Tool!
+Type 'exit' to quit the program.
+
+
+Token validation successful. Ready to proceed.
+
+Enter a prompt for text generation: Life is a box of chocolates
+
+Input Text: Life is a box of chocolates
+Generated Text: Life is a box of chocolates with a frosted apple and chocolate bar, a dark-colored cupcake, and a cupcake made with frosting. You've got one meal filled with something else—a dessert, doodle, or a banana.
+
+Enter a prompt for text generation: exit
+
+Goodbye!
+```
