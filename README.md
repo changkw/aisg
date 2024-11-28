@@ -59,3 +59,9 @@ Enter a prompt for text generation: exit
 
 Goodbye!
 ```
+## Error Handling
+- **Token Issues**: Prints a detailed error message and terminates if the token is invalid.
+- **API Errors**: Displays the error message from the API response if the request fails.
+- **Input Validation**: Rejects prompts containing non-alphabetic characters.
+## Notes
+- Ensure your Hugging Face API token has the required permissions to access the GPT-2 model.
