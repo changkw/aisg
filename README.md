@@ -19,7 +19,7 @@ This Python program generates text using the Hugging Face Inference API and the 
    ```
    API_TOKEN=your_huggingface_api_token
    ```
-3. **Run the Script**: Execute the script using Python:
+3. **Run the Program**: Execute the program using Python:
 
    ```
    python text_generation.py
@@ -65,3 +65,58 @@ Goodbye!
 - **Input Validation**: Rejects prompts containing non-alphabetic characters.
 ## Notes
 - Ensure your Hugging Face API token has the required permissions to access the GPT-2 model.
+# Word Frequency
+This Python program fetches a text file from a given URL, processes its contents, and analyzes word frequencies. It outputs the 10th to 20th most frequent words in the text, making it useful for basic text analysis tasks such as identifying commonly used words in a document.
+## Features
+- Fetches text from a provided URL.
+- Cleans the text by converting it to lowercase and removing non-alphanumeric characters (excluding spaces).
+- Counts the frequency of each word using the `collections.Counter` module.
+- Displays words ranked from 10th to 20th by frequency along with their counts.
+## Prerequisites
+- `requests` library: Install it via pip if not already installed:
+
+  ```
+  pip install requests
+  ```
+## How It Works
+1. **Fetches Text File**
+   - The script uses the `requests` library to retrieve a text file from a given URL.
+   - If the HTTP request fails (non-200 status), an error message is printed.
+2. **Text Cleaning**
+   - Converts the entire text to lowercase.
+   - Removes all non-alphanumeric characters except spaces.
+3. **Word Counting**
+   - Splits the cleaned text into words.
+   - Uses `collections.Counter` to count occurrences of each word.
+4. **Frequency Analysis**
+   - Extracts the words ranked from the 10th to the 20th most frequent.
+   - Prints the words and their frequencies.
+## Usage
+Run the script in Python to analyze text from a specific URL (i.e. Project Gutenberg text).
+
+```
+python word_frequency.py
+```
+
+Expected Output:
+
+```
+Words ranked from 10th to 20th by frequency:
+you: 1498
+for: 1364
+as: 1219
+not: 1200
+be: 1191
+he: 1107
+with: 1043
+his: 1041
+are: 1003
+i: 993
+this: 956
+```
+## Error Handling
+- **HTTP Request Errors**: If the URL is inaccessible, an error message is displayed:
+
+  ```
+  Failed to retrieve the text file.
+  ```
