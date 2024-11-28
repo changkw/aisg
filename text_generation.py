@@ -84,7 +84,7 @@ def main():
     validate_token()
     while True:
         # Read input from the user
-        user_input = input("Enter a prompt for text generation: ").strip()
+        user_input = input("Enter a prompt for text generation: ")
         # Exit condition
         if user_input.lower() == "exit":
             print("\nGoodbye!")
